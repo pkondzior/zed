@@ -1,0 +1,165 @@
+warning: unused import: `Overflow`
+ --> crates/gpui/examples/inline_span.rs:5:51
+  |
+5 |     MouseDownEvent, MouseMoveEvent, MouseUpEvent, Overflow, P...
+  |                                                   ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `parts`
+  --> crates/gpui/examples/inline_span.rs:68:17
+   |
+68 |             let parts: Vec<&str> = text.split_inclusive(&['[...
+   |                 ^^^^^ help: if this is intentional, prefix it with an underscore: `_parts`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: `gpui` (example "inline_span") generated 2 warnings (run `cargo fix --example "inline_span"` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.28s
+     Running `target/debug/examples/inline_span`
+INLINE_SPAN_DEBUG line=0 height=55.013157px baseline=40.356186px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=55.013157px baseline=38.567123px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=51.77709px baseline=37.982292px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=51.77709px baseline=35.982292px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=48.54102px baseline=35.6084px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=48.54102px baseline=33.39746px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=45.30495px baseline=30.812632px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=45.30495px baseline=33.234505px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=42.068886px baseline=28.227802px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=42.068886px baseline=30.860615px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=38.832817px baseline=25.642971px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=38.832817px baseline=28.486721px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=35.59675px baseline=23.05814px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=35.59675px baseline=26.112827px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=32.36068px baseline=20.473309px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=32.36068px baseline=23.738934px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=29.124613px baseline=17.888477px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=26.21875px baseline=15.46875px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=38.832817px baseline=24.017971px allow_expansion_elements=10
+INLINE_SPAN_DEBUG line=1 height=38.832817px baseline=24.017971px allow_expansion_elements=10
+INLINE_SPAN_DEBUG line=2 height=38.832817px baseline=24.017971px allow_expansion_elements=10
+INLINE_SPAN_DEBUG line=3 height=38.832817px baseline=24.017971px allow_expansion_elements=10
+INLINE_SPAN_DEBUG line=4 height=38.832817px baseline=24.017971px allow_expansion_elements=10
+INLINE_SPAN_DEBUG line=5 height=38.832817px baseline=24.017971px allow_expansion_elements=10
+INLINE_SPAN_DEBUG line=0 height=55.013157px baseline=40.356186px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=55.013157px baseline=38.567123px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=51.77709px baseline=37.982292px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=51.77709px baseline=35.982292px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=48.54102px baseline=35.6084px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=48.54102px baseline=33.39746px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=45.30495px baseline=30.812632px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=45.30495px baseline=33.234505px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=42.068886px baseline=28.227802px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=42.068886px baseline=30.860615px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=38.832817px baseline=25.642971px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=38.832817px baseline=28.486721px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=35.59675px baseline=23.05814px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=35.59675px baseline=26.112827px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=32.36068px baseline=20.473309px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=1 height=32.36068px baseline=23.738934px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=29.124613px baseline=17.888477px allow_expansion_elements=5
+INLINE_SPAN_DEBUG line=0 height=26.21875px baseline=15.46875px allow_expansion_elements=5
+
+thread 'main' (8241070) panicked at crates/gpui/src/arena.rs:201:14:
+attempted to dereference an ArenaRef after its Arena was cleared
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' (8241070) panicked at library/core/src/panicking.rs:225:5:
+panic in a function that cannot unwind
+stack backtrace:
+   0:        0x10561f350 - std::backtrace_rs::backtrace::libunwind::trace::he9fcaaa8b909a570
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/../../backtrace/src/backtrace/libunwind.rs:117:9
+   1:        0x10561f350 - std::backtrace_rs::backtrace::trace_unsynchronized::h461ae13f1a131604
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/../../backtrace/src/backtrace/mod.rs:66:14
+   2:        0x10561f350 - std::sys::backtrace::_print_fmt::h1fae9d9a27f62484
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/sys/backtrace.rs:66:9
+   3:        0x10561f350 - <std::sys::backtrace::BacktraceLock::print::DisplayBacktrace as core::fmt::Display>::fmt::hfd528c9d14c1136f
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/sys/backtrace.rs:39:26
+   4:        0x10562ec7c - core::fmt::rt::Argument::fmt::he35ba1204ee9b888
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/fmt/rt.rs:173:76
+   5:        0x10562ec7c - core::fmt::write::h2ddadfca81aeb692
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/fmt/mod.rs:1468:25
+   6:        0x1055fb568 - std::io::default_write_fmt::hbb1d5908edf658d2
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/io/mod.rs:639:11
+   7:        0x1055fb568 - std::io::Write::write_fmt::hc70e63382e9f29d2
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/io/mod.rs:1954:13
+   8:        0x105602f38 - std::sys::backtrace::BacktraceLock::print::hea663f6050de4073
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/sys/backtrace.rs:42:9
+   9:        0x105605b60 - std::panicking::default_hook::{{closure}}::hbcaf474e707f3b7d
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:301:27
+  10:        0x105605a14 - std::panicking::default_hook::hff9145c2c6e89cdf
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:328:9
+  11:        0x105606358 - std::panicking::panic_with_hook::he6431e171a67d1a5
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:834:13
+  12:        0x105606018 - std::panicking::panic_handler::{{closure}}::h42f8d27eb97efb5c
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:700:13
+  13:        0x105603044 - std::sys::backtrace::__rust_end_short_backtrace::h0de35f7407a5e0d8
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/sys/backtrace.rs:174:18
+  14:        0x1055f3fe0 - __rustc[eb8946e36839644a]::rust_begin_unwind
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:698:5
+  15:        0x10565e27c - core::panicking::panic_nounwind_fmt::runtime::h06d98c1ccdb7950d
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/panicking.rs:117:22
+  16:        0x10565e27c - core::panicking::panic_nounwind_fmt::h3db3f511675e5bd7
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/intrinsics/mod.rs:2435:9
+  17:        0x10565e1e0 - core::panicking::panic_nounwind::h50f882120c826cee
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/panicking.rs:225:5
+  18:        0x10565e380 - core::panicking::panic_cannot_unwind::h396781a6699a759f
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/panicking.rs:337:5
+  19:        0x105014188 - gpui[104b89ab9d4349bc]::platform::mac::window::step
+                               at /Users/pkondzior/Projects/zed/crates/gpui/src/platform/mac/window.rs:2160:1
+  20:        0x18639c400 - <unknown>
+  21:        0x18639f884 - <unknown>
+  22:        0x1863b2e7c - <unknown>
+  23:        0x1863aab4c - <unknown>
+  24:        0x1863aa848 - <unknown>
+  25:        0x18666bb24 - <unknown>
+  26:        0x1866292a4 - <unknown>
+  27:        0x186628388 - <unknown>
+  28:        0x18fe8bdf0 - <unknown>
+  29:        0x18fe8bc2c - <unknown>
+  30:        0x18fe8b984 - <unknown>
+  31:        0x18985c13c - <unknown>
+  32:        0x18985b2d8 - <unknown>
+  33:        0x18984f73c - <unknown>
+  34:        0x105452f2c - <() as objc[615809d7d672b365]::message::MessageArguments>::invoke::<()>
+                               at /Users/pkondzior/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/objc-0.2.7/src/message/mod.rs:128:17
+  35:        0x105452708 - objc[615809d7d672b365]::message::platform::send_unverified::<objc[615809d7d672b365]::runtime::Object, (), ()>
+                               at /Users/pkondzior/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/objc-0.2.7/src/message/apple/mod.rs:27:9
+  36:        0x105447060 - objc[615809d7d672b365]::message::send_message::<objc[615809d7d672b365]::runtime::Object, (), ()>
+                               at /Users/pkondzior/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/objc-0.2.7/src/message/mod.rs:178:5
+  37:        0x105447060 - <*mut objc[615809d7d672b365]::runtime::Object as cocoa[6ae534f54daca827]::appkit::NSApplication>::run
+                               at /Users/pkondzior/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cocoa-0.26.0/src/appkit.rs:628:9
+  38:        0x105023860 - <gpui[104b89ab9d4349bc]::platform::mac::platform::MacPlatform as gpui[104b89ab9d4349bc]::platform::Platform>::run
+                               at /Users/pkondzior/Projects/zed/crates/gpui/src/platform/mac/platform.rs:500:17
+  39:        0x104da3c40 - <gpui[104b89ab9d4349bc]::app::Application>::run::<inline_span[1109d7e283998356]::main::{closure#0}>
+                               at /Users/pkondzior/Projects/zed/crates/gpui/src/app.rs:187:18
+  40:        0x104da6810 - inline_span[1109d7e283998356]::main
+                               at /Users/pkondzior/Projects/zed/crates/gpui/examples/inline_span.rs:267:24
+  41:        0x104db107c - <fn() as core[5e47c8f4dec2dc26]::ops::function::FnOnce<()>>::call_once
+                               at /Users/pkondzior/.rustup/toolchains/1.91.1-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:250:5
+  42:        0x104db5358 - std[61e3cf0e49db9e2]::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+                               at /Users/pkondzior/.rustup/toolchains/1.91.1-aarch64-apple-darwin/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:158:18
+  43:        0x104dad460 - std[61e3cf0e49db9e2]::rt::lang_start::<()>::{closure#0}
+                               at /Users/pkondzior/.rustup/toolchains/1.91.1-aarch64-apple-darwin/lib/rustlib/src/rust/library/std/src/rt.rs:206:18
+  44:        0x1055fcafc - core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once::h364099bf23afeb8b
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/ops/function.rs:287:21
+  45:        0x1055fcafc - std::panicking::catch_unwind::do_call::hbcc689816f114487
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  46:        0x1055fcafc - std::panicking::catch_unwind::hc719fef4eb795f4b
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  47:        0x1055fcafc - std::panic::catch_unwind::h93f6524e71298a68
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  48:        0x1055fcafc - std::rt::lang_start_internal::{{closure}}::h7a49656a9911f7ba
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:175:24
+  49:        0x1055fcafc - std::panicking::catch_unwind::do_call::h8558ac804caf7bff
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  50:        0x1055fcafc - std::panicking::catch_unwind::hdd27a0044a09898e
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  51:        0x1055fcafc - std::panic::catch_unwind::h45527c54312cbff2
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  52:        0x1055fcafc - std::rt::lang_start_internal::hd700ba983d3377dc
+                               at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:171:5
+  53:        0x104dad0d8 - std[61e3cf0e49db9e2]::rt::lang_start::<()>
+                               at /Users/pkondzior/.rustup/toolchains/1.91.1-aarch64-apple-darwin/lib/rustlib/src/rust/library/std/src/rt.rs:205:5
+  54:        0x104da8cc8 - _main
+thread caused non-unwinding panic. aborting.

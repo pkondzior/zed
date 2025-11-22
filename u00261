@@ -1,0 +1,41 @@
+    Checking gpui v0.2.2 (/Users/pkondzior/Projects/zed/crates/gpui)
+warning: unused imports: `AnyView`, `ClickEvent`, `Interactivity`, and `fill`
+ --> crates/gpui/examples/inline_span.rs:2:18
+  |
+2 |     canvas, div, fill, px, rgb, rgba, AnyElement, AnyView, App, AppContext, Application, Bounds, CaretAffinity,
+  |                  ^^^^                             ^^^^^^^
+...
+6 |     prelude::*, relative, Interactivity, ClickEvent,
+  |                           ^^^^^^^^^^^^^  ^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0599]: no method named `build` found for mutable reference `&mut gpui::Window` in the current scope
+   --> crates/gpui/examples/inline_span.rs:103:20
+    |
+103 |             window.build(|_cx| TooltipView {
+    |             -------^^^^^ method not found in `&mut gpui::Window`
+
+warning: unused variable: `alignment_text`
+   --> crates/gpui/examples/inline_span.rs:119:13
+    |
+119 |         let alignment_text = format!("I am aligned: {:?}", context.alignment);
+    |             ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_alignment_text`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `window`
+   --> crates/gpui/examples/inline_span.rs:118:11
+    |
+118 |     move |window, cx, context| {
+    |           ^^^^^^ help: if this is intentional, prefix it with an underscore: `_window`
+
+warning: unused variable: `cx`
+   --> crates/gpui/examples/inline_span.rs:118:19
+    |
+118 |     move |window, cx, context| {
+    |                   ^^ help: if this is intentional, prefix it with an underscore: `_cx`
+
+For more information about this error, try `rustc --explain E0599`.
+warning: `gpui` (example "inline_span") generated 4 warnings
+error: could not compile `gpui` (example "inline_span") due to 1 previous error; 4 warnings emitted
